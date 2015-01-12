@@ -18,7 +18,7 @@ is.numeric(HH_power_P1$Sub_metering_2)
 
 HH_power_P1$Sub_metering_3 <- as.numeric(HH_power_P1$Sub_metering_3)
 is.numeric(HH_power_P1$Sub_metering_3)
-
+par(bg = "white")
 par(mfrow=c(1,1))
 plot(HH_power_P1_Date,HH_power_P1$Sub_metering_1, type="n",xlab="",ylab="Energy sub metering")
 lines(HH_power_P1_Date,HH_power_P1$Sub_metering_1, col="black")
