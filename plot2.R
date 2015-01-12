@@ -11,7 +11,7 @@ HH_power_P1_Date<- strptime(paste(HH_power_P1$Date, HH_power_P1$Time, sep=" "), 
 
 HH_power_P1$Global_active_power <- as.numeric(HH_power_P1$Global_active_power)
 is.numeric(HH_power_P1$Global_active_power)
-
+par(bg = "white")
 plot(HH_power_P1_Date,HH_power_P1$Global_active_power/1000, type="l",xlab="",ylab="Global active power(kilowatts)")
 dev.copy(png,file=".\\GitHub\\ExData_Plotting1\\Plot2.png",width = 480, height = 480)     
 dev.off()

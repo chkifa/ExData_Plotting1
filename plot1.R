@@ -9,6 +9,7 @@ HH_power<-read.table(".\\EDA-P1\\household_power_consumption.txt",header=T,sep="
 HH_power_P1 <- subset(HH_power, Date=="1/2/2007" | Date=="2/2/2007")
 HH_power_P1$Global_active_power <- as.numeric(HH_power_P1$Global_active_power)
 is.numeric(HH_power_P1$Global_active_power)
+par(bg = "white")
 hist(HH_power_P1$Global_active_power/1000,xlab ="Global active power(kilowatts)",main="Global Active Power",col="red")
 dev.copy(png,file=".\\GitHub\\ExData_Plotting1\\Plot1.png",width = 480, height = 480)     
 dev.off()
